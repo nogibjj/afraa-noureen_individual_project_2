@@ -1,22 +1,15 @@
 # IDS_706-Data_Engineering_Systems
-## Mini-Project 8 : Rewriting a Python Script in Rust
+## Individual Project 2 : Rust CLI Binary with SQLite
 
 ### PURPOSE
 
-This project is for a data engineering course (Mini-Project 8). The purpose of this project is to rewrite an existing Python script used for data processing in the Rust programming language. The main goals of this project are as follows:
-1. Code Migration: Rewrite the Python script in Rust, ensuring it performs the same data processing tasks.  
-2. Performance Enhancement: Evaluate the improvements in terms of execution speed and resource usage after the migration to Rust.
+This project is for a data engineering course (Individual Project 2). It combines Rust and SQLite for a CLI application featuring CRUD operations. It leverages Rust's strengths, GitHub Copilot for efficiency, GitHub Actions for automation, and includes a video demo.
 
 ***
 
 ### PROCESS
 
-To achieve the objectives of this project, the following steps are taken:
-1. Script Selection: Selected an existing Python script for data processing. This script served as a suitable candidate for migration to Rust. 
-2. Rewrite in Rust: Rewrote the selected Python script in Rust while maintaining the same functionality. This step involved translating the Python code into idiomatic Rust code.
-3. Testing and Debugging: Tested the Rust script to ensure it produces the expected results. Debugged and fixed any issues that arose during the migration.
-4. Benchmarking: Conducted performance benchmarking tests to evaluate the improvements in execution speed and resource usage achieved by the Rust version of the script.
-5. Documentation: Documented the entire process, including the code migration and performance benchmarking. Created a performance comparison report in Markdown format (README).
+
 
 ***
 
