@@ -1,0 +1,11 @@
+[package]
+name = "factorial"
+version = "0.1.0"
+edition = "2023"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
