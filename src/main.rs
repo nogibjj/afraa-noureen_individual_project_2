@@ -1,4 +1,4 @@
-use afraa-n-baskin-robbins::{extract, query, transform_load};
+use afraa_n_baskin_robbins::{extract, query, transform_load};
 use std::env;
 
 fn main() {
