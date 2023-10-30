@@ -104,7 +104,6 @@ pub fn query(query: &str) -> Result<()> {
                 row.get::<usize, i32>(5)?,
                 row.get::<usize, i32>(6)?,
                 row.get::<usize, i32>(7)?,
-                row.get::<usize, f32>(8)?,
             ))
         })?;
 
