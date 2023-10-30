@@ -5,6 +5,8 @@
 
 This project is for a data engineering course (Individual Project 2). It combines Rust and SQLite for a CLI application featuring CRUD operations. It leverages Rust's strengths, GitHub Copilot for efficiency, GitHub Actions for automation, and includes a video demo.
 
+Dataset: [Baskin Robbins Ice-Cream](https://raw.githubusercontent.com/prasertcbs/basic-dataset/master/baskin_icecream.csv)
+
 ***
 
 ### PROCESS
