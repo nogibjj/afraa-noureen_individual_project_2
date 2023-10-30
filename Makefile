@@ -1,64 +1,75 @@
+# Display Rust command-line utility versions
 rust-version:
 	@echo "Rust command-line utility versions:"
-	rustc --version 			#rust compiler
-	cargo --version 			#rust package manager
-	rustfmt --version			#rust code formatter
-	rustup --version			#rust toolchain manager
-	clippy-driver --version		#rust linter
+	rustc --version              # Rust compiler
+	cargo --version              # Rust package manager
+	rustfmt --version            # Rust code formatter
+	rustup --version             # Rust toolchain manager
+	clippy-driver --version      # Rust linter
 
+# Format code using rustfmt
 format:
 	cargo fmt --quiet
 
-install:
-	# Install if needed
-	#@echo "Updating rust toolchain"
-	#rustup update stable
-	#rustup default stable 
-
+# Run clippy for linting
 lint:
 	cargo clippy --quiet
 
+# Run tests
 test:
 	cargo test --quiet
 
+# Build and run the project
 run:
 	cargo run
 
+# Build release version
 release:
 	cargo build --release
 
+# Install Rust toolchain if needed
+install:
+	# Install if needed
+	# @echo "Updating rust toolchain"
+	# rustup update stable
+	# rustup default stable 
+
+# Run all formatting, linting, and testing tasks
 all: format lint test run
 
-python_install:
-	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+# Custom tasks
 
-python_test:
-	python -m pytest -vv --cov=main --cov=mylib test_*.py
+# Extract data
+extract: 
+	cargo run extract
 
-python_format:	
-	black *.py 
+# Transform and Load data
+transform_load:
+	cargo run transform_load
 
-python_lint:
-	ruff check *.py mylib/*.py
+# Create a database entry
+create:
+	cargo run query "INSERT INTO baskin_icecream (Flavour, Calories, Total_Fat_g, Trans_Fat_g, Carbohydrates_g, Sugars_g , Protein_g, Size) VALUES (Butterscotch',155,8.5,0.3,20,12,3.5,kids70g);"
 
-python_container-lint:
-	docker run --rm -i hadolint/hadolint < Dockerfile
+# Read from the database
+read:
+	cargo run query "SELECT * FROM baskin_icecream WHERE Flavour='Fudge Brownie';"
 
-python_refactor: format lint
+# Update a database entry
+update:
+	cargo run query "UPDATE baskin_icecream SET Falvour='Rainbow Sherbet',Calories=135,Total_Fat_g=2.0,Trans_Fat_g=0.1,Carbohydrates_g=22,Sugars_g=20,Protein_g=1.0,Size='kids70g' WHERE Flavour='Rainbow Sherbet';"
 
-python_deploy:
-	#deploy goes here
-		
-python_all: install lint test format deploy
+# Delete a database entry
+delete:
+	cargo run query "DELETE FROM baskin_icecream WHERE Calories=160;"
 
+# Generate and push changes to GitHub
 generate_and_push:
-	# Add, commit, and push the generated files to GitHub
 	@if [ -n "$$(git status --porcelain)" ]; then \
 		git config --local user.email "action@github.com"; \
 		git config --local user.name "GitHub Action"; \
 		git add .; \
-		git commit -m "Add metric log"; \
+		git commit -m "Add query log"; \
 		git push; \
 	else \
 		echo "No changes to commit. Skipping commit and push."; \
