@@ -13,6 +13,7 @@ fn main() {
         "extract" => {
             extract(
                 "https://raw.githubusercontent.com/prasertcbs/basic-dataset/master/baskin_icecream.csv",
+                "data/baskin_icecream.csv",
                 "data",
             );
         }
