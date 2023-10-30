@@ -9,7 +9,24 @@ This project is for a data engineering course (Individual Project 2). It combine
 
 ### PROCESS
 
+This project's primary objective is to perform ETL (Extract, Transform, Load) operations and enable efficient database querying using Rust. Here's a summary of the key functionalities:
 
+Data Extraction (E): This involves fetching a dataset from a specified URL in CSV format.  
+Data Transformation (T): The data undergoes various transformations such as cleaning, filtering, and enriching to prepare it for analysis.  
+Data Loading (L): Transformed data is loaded into an SQLite database table. The process includes create and update operations.  
+Database Querying (Q): The application accepts and executes SQL queries, enabling CRUD (Create, Read, Update, Delete) operations on the SQLite database for data analysis and insights retrieval.  
+
+***
+
+### STEPS
+
+Data Extraction: The `extract` function downloads data from a specified URL and saves it locally.
+
+Data Transformation: The `transform_load` function reads a CSV dataset, performs necessary table operations, and inserts records into an SQLite database table named BaskinRobbinsDB with specific columns.
+
+Database Querying: The `query` function empowers users to execute SELECT, INSERT, UPDATE, and DELETE operations on the database. It logs these queries in a Markdown file named query_log.md.
+
+Logging: The `log_query` function appends SQL queries to a log file, making it easier to track and analyze executed queries.
 
 ***
 
