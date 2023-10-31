@@ -17,8 +17,7 @@ lint:
 
 # Run tests
 test:
-	# cargo test --quiet
-	RUST_BACKTRACE=1 cargo test --test etl_tests
+	cargo test --quiet
 
 # Build and run the project
 run:
