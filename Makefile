@@ -57,7 +57,7 @@ read:
 
 # Update a database entry
 update:
-	cargo run query "UPDATE baskin_icecream SET Falvour='Rainbow Sherbet',Calories=135,Total_Fat_g=2.0,Trans_Fat_g=0.1,Carbohydrates_g=22,Sugars_g=20,Protein_g=1.0,Size='kids70g' WHERE Flavour='Rainbow Sherbet';"
+	cargo run query "UPDATE baskin_icecream SET Flavour='Rainbow Sherbet',Calories=135,Total_Fat_g=2.0,Trans_Fat_g=0.1,Carbohydrates_g=22,Sugars_g=20,Protein_g=1.0,Size='kids70g' WHERE Flavour='Rainbow Sherbet';"
 
 # Delete a database entry
 delete:
