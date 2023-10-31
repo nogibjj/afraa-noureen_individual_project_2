@@ -53,7 +53,7 @@ create:
 
 # Read from the database
 read:
-	cargo run query "SELECT * FROM baskin_icecream WHERE Flavour='Fudge Brownie';"
+	cargo run query "SELECT * FROM baskin_icecream WHERE Flavour='Vanilla';"
 
 # Update a database entry
 update:
