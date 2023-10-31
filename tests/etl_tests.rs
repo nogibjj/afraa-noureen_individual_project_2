@@ -23,7 +23,7 @@ fn test_transform_load() {
 #[test]
 fn test_query() {
     // Execute a SELECT query
-    let select_query = "SELECT * FROM baskin_icecream WHERE Flavour = 'Mango Tango';";
+    let select_query = "SELECT * FROM baskin_icecream WHERE Flavour = 'Vanilla';";
     let result = query(select_query);
 
     assert!(result.is_ok());
