@@ -1,9 +1,8 @@
-# IDS_706-Data_Engineering_Systems
-## Individual Project 2 : Rust CLI Binary with SQLite
+# Rust CLI Binary with SQLite
 
 ### PURPOSE
 
-This project is for a data engineering course (Individual Project 2). It combines Rust and SQLite for a CLI application featuring CRUD operations. It leverages Rust's strengths, GitHub Copilot for efficiency, GitHub Actions for automation, and includes a video demo.
+This project combines Rust and SQLite for a CLI application featuring CRUD operations. It leverages Rust's strengths, GitHub Copilot for efficiency, GitHub Actions for automation, and includes a video demo.
 
 Dataset: [Baskin Robbins Ice-Cream](https://raw.githubusercontent.com/prasertcbs/basic-dataset/master/baskin_icecream.csv)
 
